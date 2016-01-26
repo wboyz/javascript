@@ -30,7 +30,7 @@ Other Style Guides
   1. [Összehasonlító Operátorok és Egyenlőség (Comparison Operators & Equality)](#comparison-operators--equality)
   1. [Blokkok (Blocks)](#blocks)
   1. [Kommentek (Comments)](#comments)
-  1. [Whitespace](#whitespace)
+  1. [Szóközök és Tabulátorok (Whitespace)](#whitespace)
   1. [Vesszők (Commas)](#commas)
   1. [Pontosvesszők (Semicolons)](#semicolons)
   1. [Type Casting & Coercion](#type-casting--coercion)
@@ -50,7 +50,7 @@ Other Style Guides
   1. [Contributors](#contributors)
   1. [License](#license)
 
-## Types
+## Típusok
 
   - [1.1](#1.1) <a name='1.1'></a> **Primitives**: When you access a primitive type you work directly on its value.
 
@@ -85,7 +85,7 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## References
+## Referenciák
 
   - [2.1](#2.1) <a name='2.1'></a> Use `const` for all of your references; avoid using `var`.
 
@@ -137,7 +137,7 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## Objects
+## Objektumok
 
   - [3.1](#3.1) <a name='3.1'></a> Use the literal syntax for object creation.
 
