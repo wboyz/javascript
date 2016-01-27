@@ -1,4 +1,4 @@
-# Airbnb JavaScript Style Guide() {
+# Airbnb JavaScript Kézikönyv() {
 
 *A JavaScript egyik legésszerűbb megközelítése*
 
@@ -83,7 +83,7 @@ Más Kézikönyvek
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Referenciák
 
@@ -94,11 +94,11 @@ Más Kézikönyvek
   eslint rules: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html).
 
     ```javascript
-    // bad
+    // rossz
     var a = 1;
     var b = 2;
 
-    // good
+    // jó
     const a = 1;
     const b = 2;
     ```
@@ -110,13 +110,13 @@ Más Kézikönyvek
   eslint rules: [`no-var`](http://eslint.org/docs/rules/no-var.html).
 
     ```javascript
-    // bad
+    // rossz
     var count = 1;
     if (true) {
       count += 1;
     }
 
-    // good, use the let.
+    // jó, use the let.
     let count = 1;
     if (true) {
       count += 1;
@@ -135,7 +135,7 @@ Más Kézikönyvek
     console.log(b); // ReferenceError
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Objektumok
 
@@ -144,23 +144,23 @@ Más Kézikönyvek
   eslint rules: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html).
 
     ```javascript
-    // bad
+    // rossz
     const item = new Object();
 
-    // good
+    // jó
     const item = {};
     ```
 
   - [3.2](#3.2) <a name='3.2'></a> If your code will be executed in browsers in script context, don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61). It’s OK to use them in ES6 modules and server-side code.
 
     ```javascript
-    // bad
+    // rossz
     const superman = {
       default: { clark: 'kent' },
       private: true,
     };
 
-    // good
+    // jó
     const superman = {
       defaults: { clark: 'kent' },
       hidden: true,
@@ -170,17 +170,17 @@ Más Kézikönyvek
   - [3.3](#3.3) <a name='3.3'></a> Use readable synonyms in place of reserved words.
 
     ```javascript
-    // bad
+    // rossz
     const superman = {
       class: 'alien',
     };
 
-    // bad
+    // rossz
     const superman = {
       klass: 'alien',
     };
 
-    // good
+    // jó
     const superman = {
       type: 'alien',
     };
@@ -197,14 +197,14 @@ Más Kézikönyvek
       return `a key named ${k}`;
     }
 
-    // bad
+    // rossz
     const obj = {
       id: 5,
       name: 'San Francisco',
     };
     obj[getKey('enabled')] = true;
 
-    // good
+    // jó
     const obj = {
       id: 5,
       name: 'San Francisco',
@@ -218,7 +218,7 @@ Más Kézikönyvek
   eslint rules: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html).
 
     ```javascript
-    // bad
+    // rossz
     const atom = {
       value: 1,
 
@@ -227,7 +227,7 @@ Más Kézikönyvek
       },
     };
 
-    // good
+    // jó
     const atom = {
       value: 1,
 
@@ -247,12 +247,12 @@ Más Kézikönyvek
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
 
-    // bad
+    // rossz
     const obj = {
       lukeSkywalker: lukeSkywalker,
     };
 
-    // good
+    // jó
     const obj = {
       lukeSkywalker,
     };
@@ -266,7 +266,7 @@ Más Kézikönyvek
     const anakinSkywalker = 'Anakin Skywalker';
     const lukeSkywalker = 'Luke Skywalker';
 
-    // bad
+    // rossz
     const obj = {
       episodeOne: 1,
       twoJediWalkIntoACantina: 2,
@@ -276,7 +276,7 @@ Más Kézikönyvek
       anakinSkywalker,
     };
 
-    // good
+    // jó
     const obj = {
       lukeSkywalker,
       anakinSkywalker,
@@ -287,7 +287,7 @@ Más Kézikönyvek
     };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Arrays
 
@@ -296,10 +296,10 @@ Más Kézikönyvek
   eslint rules: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html).
 
     ```javascript
-    // bad
+    // rossz
     const items = new Array();
 
-    // good
+    // jó
     const items = [];
     ```
 
@@ -308,10 +308,10 @@ Más Kézikönyvek
     ```javascript
     const someStack = [];
 
-    // bad
+    // rossz
     someStack[someStack.length] = 'abracadabra';
 
-    // good
+    // jó
     someStack.push('abracadabra');
     ```
 
@@ -319,7 +319,7 @@ Más Kézikönyvek
   - [4.3](#4.3) <a name='4.3'></a> Use array spreads `...` to copy arrays.
 
     ```javascript
-    // bad
+    // rossz
     const len = items.length;
     const itemsCopy = [];
     let i;
@@ -328,7 +328,7 @@ Más Kézikönyvek
       itemsCopy[i] = items[i];
     }
 
-    // good
+    // jó
     const itemsCopy = [...items];
     ```
   - [4.4](#4.4) <a name='4.4'></a> To convert an array-like object to an array, use Array#from.
@@ -338,7 +338,7 @@ Más Kézikönyvek
     const nodes = Array.from(foo);
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Destructuring
 
@@ -347,7 +347,7 @@ Más Kézikönyvek
   > Why? Destructuring saves you from creating temporary references for those properties.
 
     ```javascript
-    // bad
+    // rossz
     function getFullName(user) {
       const firstName = user.firstName;
       const lastName = user.lastName;
@@ -355,7 +355,7 @@ Más Kézikönyvek
       return `${firstName} ${lastName}`;
     }
 
-    // good
+    // jó
     function getFullName(obj) {
       const { firstName, lastName } = obj;
       return `${firstName} ${lastName}`;
@@ -372,11 +372,11 @@ Más Kézikönyvek
     ```javascript
     const arr = [1, 2, 3, 4];
 
-    // bad
+    // rossz
     const first = arr[0];
     const second = arr[1];
 
-    // good
+    // jó
     const [first, second] = arr;
     ```
 
@@ -385,7 +385,7 @@ Más Kézikönyvek
   > Why? You can add new properties over time or change the order of things without breaking call sites.
 
     ```javascript
-    // bad
+    // rossz
     function processInput(input) {
       // then a miracle occurs
       return [left, right, top, bottom];
@@ -394,7 +394,7 @@ Más Kézikönyvek
     // the caller needs to think about the order of return data
     const [left, __, top] = processInput(input);
 
-    // good
+    // jó
     function processInput(input) {
       // then a miracle occurs
       return { left, right, top, bottom };
@@ -405,7 +405,7 @@ Más Kézikönyvek
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Strings
 
@@ -414,10 +414,10 @@ Más Kézikönyvek
   eslint rules: [`quotes`](http://eslint.org/docs/rules/quotes.html).
 
     ```javascript
-    // bad
+    // rossz
     const name = "Capt. Janeway";
 
-    // good
+    // jó
     const name = 'Capt. Janeway';
     ```
 
@@ -425,16 +425,16 @@ Más Kézikönyvek
   - [6.3](#6.3) <a name='6.3'></a> Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
 
     ```javascript
-    // bad
+    // rossz
     const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
-    // bad
+    // rossz
     const errorMessage = 'This is a super long error that was thrown because \
     of Batman. When you stop to think about how Batman had anything to do \
     with this, you would get nowhere \
     fast.';
 
-    // good
+    // jó
     const errorMessage = 'This is a super long error that was thrown because ' +
       'of Batman. When you stop to think about how Batman had anything to do ' +
       'with this, you would get nowhere fast.';
@@ -448,24 +448,24 @@ Más Kézikönyvek
   eslint rules: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html).
 
     ```javascript
-    // bad
+    // rossz
     function sayHi(name) {
       return 'How are you, ' + name + '?';
     }
 
-    // bad
+    // rossz
     function sayHi(name) {
       return ['How are you, ', name, '?'].join();
     }
 
-    // good
+    // jó
     function sayHi(name) {
       return `How are you, ${name}?`;
     }
     ```
   - [6.5](#6.5) <a name='6.5'></a> Never use `eval()` on a string, it opens too many vulnerabilities.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Functions
@@ -475,11 +475,11 @@ Más Kézikönyvek
   > Why? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
 
     ```javascript
-    // bad
+    // rossz
     const foo = function () {
     };
 
-    // good
+    // jó
     function foo() {
     }
     ```
@@ -497,14 +497,14 @@ Más Kézikönyvek
   - [7.4](#7.4) <a name='7.4'></a> **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
     ```javascript
-    // bad
+    // rossz
     if (currentUser) {
       function test() {
         console.log('Nope.');
       }
     }
 
-    // good
+    // jó
     let test;
     if (currentUser) {
       test = () => {
@@ -516,12 +516,12 @@ Más Kézikönyvek
   - [7.5](#7.5) <a name='7.5'></a> Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
     ```javascript
-    // bad
+    // rossz
     function nope(name, options, arguments) {
       // ...stuff...
     }
 
-    // good
+    // jó
     function yup(name, options, args) {
       // ...stuff...
     }
@@ -533,13 +533,13 @@ Más Kézikönyvek
   > Why? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
 
     ```javascript
-    // bad
+    // rossz
     function concatenateAll() {
       const args = Array.prototype.slice.call(arguments);
       return args.join('');
     }
 
-    // good
+    // jó
     function concatenateAll(...args) {
       return args.join('');
     }
@@ -566,7 +566,7 @@ Más Kézikönyvek
       // ...
     }
 
-    // good
+    // jó
     function handleThings(opts = {}) {
       // ...
     }
@@ -578,7 +578,7 @@ Más Kézikönyvek
 
   ```javascript
   var b = 1;
-  // bad
+  // rossz
   function count(a = b++) {
     console.log(a);
   }
@@ -591,12 +591,12 @@ Más Kézikönyvek
   - [7.9](#7.9) <a name='7.9'></a> Always put default parameters last.
 
     ```javascript
-    // bad
+    // rossz
     function handleThings(opts = {}, name) {
       // ...
     }
 
-    // good
+    // jó
     function handleThings(name, opts = {}) {
       // ...
     }
@@ -607,7 +607,7 @@ Más Kézikönyvek
   > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
 
   ```javascript
-  // bad
+  // rossz
   var add = new Function('a', 'b', 'return a + b');
 
   // still bad
@@ -619,17 +619,17 @@ Más Kézikönyvek
   > Why? Consistency is good, and you shouldn’t have to add or remove a space when adding or removing a name.
 
   ```javascript
-  // bad
+  // rossz
   const f = function(){};
   const g = function (){};
   const h = function() {};
 
-  // good
+  // jó
   const x = function () {};
   const y = function a() {};
   ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Arrow Functions
 
@@ -642,13 +642,13 @@ Más Kézikönyvek
   eslint rules: [`prefer-arrow-callback`](http://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](http://eslint.org/docs/rules/arrow-spacing.html).
 
     ```javascript
-    // bad
+    // rossz
     [1, 2, 3].map(function (x) {
       const y = x + 1;
       return x * y;
     });
 
-    // good
+    // jó
     [1, 2, 3].map((x) => {
       const y = x + 1;
       return x * y;
@@ -664,16 +664,16 @@ Más Kézikönyvek
   eslint rules: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html), [`arrow-body-style`](http://eslint.org/docs/rules/arrow-body-style.html).
 
     ```javascript
-    // good
+    // jó
     [1, 2, 3].map(number => `A string containing the ${number}.`);
 
-    // bad
+    // rossz
     [1, 2, 3].map(number => {
       const nextNumber = number + 1;
       `A string containing the ${nextNumber}.`;
     });
 
-    // good
+    // jó
     [1, 2, 3].map(number => {
       const nextNumber = number + 1;
       return `A string containing the ${nextNumber}.`;
@@ -685,13 +685,13 @@ Más Kézikönyvek
   > Why? It shows clearly where the function starts and ends.
 
     ```js
-    // bad
+    // rossz
     [1, 2, 3].map(number => 'As time went by, the string containing the ' +
       `${number} became much longer. So we needed to break it over multiple ` +
       'lines.'
     );
 
-    // good
+    // jó
     [1, 2, 3].map(number => (
       `As time went by, the string containing the ${number} became much ` +
       'longer. So we needed to break it over multiple lines.'
@@ -706,14 +706,14 @@ Más Kézikönyvek
   eslint rules: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html).
 
     ```js
-    // good
+    // jó
     [1, 2, 3].map(x => x * x);
 
-    // good
+    // jó
     [1, 2, 3].reduce((y, x) => x + y);
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Constructors
@@ -723,7 +723,7 @@ Más Kézikönyvek
   > Why? `class` syntax is more concise and easier to reason about.
 
     ```javascript
-    // bad
+    // rossz
     function Queue(contents = []) {
       this._queue = [...contents];
     }
@@ -734,7 +734,7 @@ Más Kézikönyvek
     }
 
 
-    // good
+    // jó
     class Queue {
       constructor(contents = []) {
         this._queue = [...contents];
@@ -752,7 +752,7 @@ Más Kézikönyvek
   > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
 
     ```javascript
-    // bad
+    // rossz
     const inherits = require('inherits');
     function PeekableQueue(contents) {
       Queue.apply(this, contents);
@@ -762,7 +762,7 @@ Más Kézikönyvek
       return this._queue[0];
     }
 
-    // good
+    // jó
     class PeekableQueue extends Queue {
       peek() {
         return this._queue[0];
@@ -773,7 +773,7 @@ Más Kézikönyvek
   - [9.3](#9.3) <a name='9.3'></a> Methods can return `this` to help with method chaining.
 
     ```javascript
-    // bad
+    // rossz
     Jedi.prototype.jump = function () {
       this.jumping = true;
       return true;
@@ -787,7 +787,7 @@ Más Kézikönyvek
     luke.jump(); // => true
     luke.setHeight(20); // => undefined
 
-    // good
+    // jó
     class Jedi {
       jump() {
         this.jumping = true;
@@ -825,7 +825,7 @@ Más Kézikönyvek
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Modules
@@ -835,7 +835,7 @@ Más Kézikönyvek
   > Why? Modules are the future, let's start using the future now.
 
     ```javascript
-    // bad
+    // rossz
     const AirbnbStyleGuide = require('./AirbnbStyleGuide');
     module.exports = AirbnbStyleGuide.es6;
 
@@ -853,10 +853,10 @@ Más Kézikönyvek
   > Why? This makes sure you have a single default export.
 
     ```javascript
-    // bad
+    // rossz
     import * as AirbnbStyleGuide from './AirbnbStyleGuide';
 
-    // good
+    // jó
     import AirbnbStyleGuide from './AirbnbStyleGuide';
     ```
 
@@ -865,17 +865,17 @@ Más Kézikönyvek
   > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
 
     ```javascript
-    // bad
+    // rossz
     // filename es6.js
     export { es6 as default } from './airbnbStyleGuide';
 
-    // good
+    // jó
     // filename es6.js
     import { es6 } from './AirbnbStyleGuide';
     export default es6;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Iterators and Generators
 
@@ -888,7 +888,7 @@ Más Kézikönyvek
     ```javascript
     const numbers = [1, 2, 3, 4, 5];
 
-    // bad
+    // rossz
     let sum = 0;
     for (let num of numbers) {
       sum += num;
@@ -896,7 +896,7 @@ Más Kézikönyvek
 
     sum === 15;
 
-    // good
+    // jó
     let sum = 0;
     numbers.forEach((num) => sum += num);
     sum === 15;
@@ -910,7 +910,7 @@ Más Kézikönyvek
 
   > Why? They don't transpile well to ES5.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Properties
@@ -925,10 +925,10 @@ Más Kézikönyvek
       age: 28,
     };
 
-    // bad
+    // rossz
     const isJedi = luke['jedi'];
 
-    // good
+    // jó
     const isJedi = luke.jedi;
     ```
 
@@ -947,7 +947,7 @@ Más Kézikönyvek
     const isJedi = getProp('jedi');
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Variables
@@ -955,10 +955,10 @@ Más Kézikönyvek
   - [13.1](#13.1) <a name='13.1'></a> Always use `const` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
 
     ```javascript
-    // bad
+    // rossz
     superPower = new SuperPower();
 
-    // good
+    // jó
     const superPower = new SuperPower();
     ```
 
@@ -969,18 +969,18 @@ Más Kézikönyvek
   eslint rules: [`one-var`](http://eslint.org/docs/rules/one-var.html).
 
     ```javascript
-    // bad
+    // rossz
     const items = getItems(),
         goSportsTeam = true,
         dragonball = 'z';
 
-    // bad
+    // rossz
     // (compare to above, and try to spot the mistake)
     const items = getItems(),
         goSportsTeam = true;
         dragonball = 'z';
 
-    // good
+    // jó
     const items = getItems();
     const goSportsTeam = true;
     const dragonball = 'z';
@@ -991,19 +991,19 @@ Más Kézikönyvek
   > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
     ```javascript
-    // bad
+    // rossz
     let i, len, dragonball,
         items = getItems(),
         goSportsTeam = true;
 
-    // bad
+    // rossz
     let i;
     const items = getItems();
     let dragonball;
     const goSportsTeam = true;
     let len;
 
-    // good
+    // jó
     const goSportsTeam = true;
     const items = getItems();
     let dragonball;
@@ -1016,7 +1016,7 @@ Más Kézikönyvek
   > Why? `let` and `const` are block scoped and not function scoped.
 
     ```javascript
-    // good
+    // jó
     function () {
       test();
       console.log('doing stuff..');
@@ -1032,7 +1032,7 @@ Más Kézikönyvek
       return name;
     }
 
-    // bad - unnecessary function call
+    // rossz - unnecessary function call
     function (hasName) {
       const name = getName();
 
@@ -1045,7 +1045,7 @@ Más Kézikönyvek
       return true;
     }
 
-    // good
+    // jó
     function (hasName) {
       if (!hasName) {
         return false;
@@ -1058,7 +1058,7 @@ Más Kézikönyvek
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Hoisting
@@ -1154,7 +1154,7 @@ Más Kézikönyvek
 
   - For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) by [Ben Cherry](http://www.adequatelygood.com/).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Comparison Operators & Equality
@@ -1181,22 +1181,22 @@ Más Kézikönyvek
   - [15.3](#15.3) <a name='15.3'></a> Use shortcuts.
 
     ```javascript
-    // bad
+    // rossz
     if (name !== '') {
       // ...stuff...
     }
 
-    // good
+    // jó
     if (name) {
       // ...stuff...
     }
 
-    // bad
+    // rossz
     if (collection.length > 0) {
       // ...stuff...
     }
 
-    // good
+    // jó
     if (collection.length) {
       // ...stuff...
     }
@@ -1204,7 +1204,7 @@ Más Kézikönyvek
 
   - [15.4](#15.4) <a name='15.4'></a> For more information see [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Blocks
@@ -1212,22 +1212,22 @@ Más Kézikönyvek
   - [16.1](#16.1) <a name='16.1'></a> Use braces with all multi-line blocks.
 
     ```javascript
-    // bad
+    // rossz
     if (test)
       return false;
 
-    // good
+    // jó
     if (test) return false;
 
-    // good
+    // jó
     if (test) {
       return false;
     }
 
-    // bad
+    // rossz
     function () { return false; }
 
-    // good
+    // jó
     function () {
       return false;
     }
@@ -1239,7 +1239,7 @@ Más Kézikönyvek
     eslint rules: [`brace-style`](http://eslint.org/docs/rules/brace-style.html).
 
     ```javascript
-    // bad
+    // rossz
     if (test) {
       thing1();
       thing2();
@@ -1248,7 +1248,7 @@ Más Kézikönyvek
       thing3();
     }
 
-    // good
+    // jó
     if (test) {
       thing1();
       thing2();
@@ -1258,7 +1258,7 @@ Más Kézikönyvek
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Comments
@@ -1266,7 +1266,7 @@ Más Kézikönyvek
   - [17.1](#17.1) <a name='17.1'></a> Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
 
     ```javascript
-    // bad
+    // rossz
     // make() returns a new element
     // based on the passed in tag name
     //
@@ -1279,7 +1279,7 @@ Más Kézikönyvek
       return element;
     }
 
-    // good
+    // jó
     /**
      * make() returns a new element
      * based on the passed in tag name
@@ -1298,14 +1298,14 @@ Más Kézikönyvek
   - [17.2](#17.2) <a name='17.2'></a> Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment unless it's on the first line of a block.
 
     ```javascript
-    // bad
+    // rossz
     const active = true;  // is current tab
 
-    // good
+    // jó
     // is current tab
     const active = true;
 
-    // bad
+    // rossz
     function getType() {
       console.log('fetching type...');
       // set the default type to 'no type'
@@ -1314,7 +1314,7 @@ Más Kézikönyvek
       return type;
     }
 
-    // good
+    // jó
     function getType() {
       console.log('fetching type...');
 
@@ -1361,7 +1361,7 @@ Más Kézikönyvek
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Whitespace
@@ -1371,17 +1371,17 @@ Más Kézikönyvek
   eslint rules: [`indent`](http://eslint.org/docs/rules/indent.html).
 
     ```javascript
-    // bad
+    // rossz
     function () {
     ∙∙∙∙const name;
     }
 
-    // bad
+    // rossz
     function () {
     ∙const name;
     }
 
-    // good
+    // jó
     function () {
     ∙∙const name;
     }
@@ -1392,23 +1392,23 @@ Más Kézikönyvek
   eslint rules: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks.html).
 
     ```javascript
-    // bad
+    // rossz
     function test(){
       console.log('test');
     }
 
-    // good
+    // jó
     function test() {
       console.log('test');
     }
 
-    // bad
+    // rossz
     dog.set('attr',{
       age: '1 year',
       breed: 'Bernese Mountain Dog',
     });
 
-    // good
+    // jó
     dog.set('attr', {
       age: '1 year',
       breed: 'Bernese Mountain Dog',
@@ -1420,22 +1420,22 @@ Más Kézikönyvek
   eslint rules: [`space-after-keywords`](http://eslint.org/docs/rules/space-after-keywords.html), [`space-before-keywords`](http://eslint.org/docs/rules/space-before-keywords.html).
 
     ```javascript
-    // bad
+    // rossz
     if(isJedi) {
       fight ();
     }
 
-    // good
+    // jó
     if (isJedi) {
       fight();
     }
 
-    // bad
+    // rossz
     function fight () {
       console.log ('Swooosh!');
     }
 
-    // good
+    // jó
     function fight() {
       console.log('Swooosh!');
     }
@@ -1446,24 +1446,24 @@ Más Kézikönyvek
   eslint rules: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops.html).
 
     ```javascript
-    // bad
+    // rossz
     const x=y+5;
 
-    // good
+    // jó
     const x = y + 5;
     ```
 
   - [18.5](#18.5) <a name='18.5'></a> End files with a single newline character.
 
     ```javascript
-    // bad
+    // rossz
     (function (global) {
       // ...stuff...
     })(this);
     ```
 
     ```javascript
-    // bad
+    // rossz
     (function (global) {
       // ...stuff...
     })(this);↵
@@ -1471,7 +1471,7 @@ Más Kézikönyvek
     ```
 
     ```javascript
-    // good
+    // jó
     (function (global) {
       // ...stuff...
     })(this);↵
@@ -1481,10 +1481,10 @@ Más Kézikönyvek
     emphasizes that the line is a method call, not a new statement.
 
     ```javascript
-    // bad
+    // rossz
     $('#items').find('.selected').highlight().end().find('.open').updateCount();
 
-    // bad
+    // rossz
     $('#items').
       find('.selected').
         highlight().
@@ -1492,7 +1492,7 @@ Más Kézikönyvek
       find('.open').
         updateCount();
 
-    // good
+    // jó
     $('#items')
       .find('.selected')
         .highlight()
@@ -1500,13 +1500,13 @@ Más Kézikönyvek
       .find('.open')
         .updateCount();
 
-    // bad
+    // rossz
     const leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
         .attr('width', (radius + margin) * 2).append('svg:g')
         .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
         .call(tron.led);
 
-    // good
+    // jó
     const leds = stage.selectAll('.led')
         .data(data)
       .enter().append('svg:svg')
@@ -1520,20 +1520,20 @@ Más Kézikönyvek
   - [18.7](#18.7) <a name='18.7'></a> Leave a blank line after blocks and before the next statement.
 
     ```javascript
-    // bad
+    // rossz
     if (foo) {
       return bar;
     }
     return baz;
 
-    // good
+    // jó
     if (foo) {
       return bar;
     }
 
     return baz;
 
-    // bad
+    // rossz
     const obj = {
       foo() {
       },
@@ -1542,7 +1542,7 @@ Más Kézikönyvek
     };
     return obj;
 
-    // good
+    // jó
     const obj = {
       foo() {
       },
@@ -1553,7 +1553,7 @@ Más Kézikönyvek
 
     return obj;
 
-    // bad
+    // rossz
     const arr = [
       function foo() {
       },
@@ -1562,7 +1562,7 @@ Más Kézikönyvek
     ];
     return arr;
 
-    // good
+    // jó
     const arr = [
       function foo() {
       },
@@ -1579,7 +1579,7 @@ Más Kézikönyvek
   eslint rules: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks.html).
 
     ```javascript
-    // bad
+    // rossz
     function bar() {
 
       console.log(foo);
@@ -1595,12 +1595,12 @@ Más Kézikönyvek
 
     }
 
-    // good
+    // jó
     function bar() {
       console.log(foo);
     }
 
-    // good
+    // jó
     if (baz) {
       console.log(qux);
     } else {
@@ -1613,22 +1613,22 @@ Más Kézikönyvek
   eslint rules: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens.html).
 
     ```javascript
-    // bad
+    // rossz
     function bar( foo ) {
       return foo;
     }
 
-    // good
+    // jó
     function bar(foo) {
       return foo;
     }
 
-    // bad
+    // rossz
     if ( foo ) {
       console.log(foo);
     }
 
-    // good
+    // jó
     if (foo) {
       console.log(foo);
     }
@@ -1639,11 +1639,11 @@ Más Kézikönyvek
   eslint rules: [`array-bracket-spacing`](http://eslint.org/docs/rules/array-bracket-spacing.html).
 
     ```javascript
-    // bad
+    // rossz
     const foo = [ 1, 2, 3 ];
     console.log(foo[ 0 ]);
 
-    // good
+    // jó
     const foo = [1, 2, 3];
     console.log(foo[0]);
     ```
@@ -1653,14 +1653,14 @@ Más Kézikönyvek
   eslint rules: [`object-curly-spacing`](http://eslint.org/docs/rules/object-curly-spacing.html).
 
     ```javascript
-    // bad
+    // rossz
     const foo = {clark: 'kent'};
 
-    // good
+    // jó
     const foo = { clark: 'kent' };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Commas
 
@@ -1669,21 +1669,21 @@ Más Kézikönyvek
   eslint rules: [`comma-style`](http://eslint.org/docs/rules/comma-style.html).
 
     ```javascript
-    // bad
+    // rossz
     const story = [
         once
       , upon
       , aTime
     ];
 
-    // good
+    // jó
     const story = [
       once,
       upon,
       aTime,
     ];
 
-    // bad
+    // rossz
     const hero = {
         firstName: 'Ada'
       , lastName: 'Lovelace'
@@ -1691,7 +1691,7 @@ Más Kézikönyvek
       , superPower: 'computers'
     };
 
-    // good
+    // jó
     const hero = {
       firstName: 'Ada',
       lastName: 'Lovelace',
@@ -1707,7 +1707,7 @@ Más Kézikönyvek
   > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
 
     ```javascript
-    // bad - git diff without trailing comma
+    // rossz - git diff without trailing comma
     const hero = {
          firstName: 'Florence',
     -    lastName: 'Nightingale'
@@ -1715,14 +1715,14 @@ Más Kézikönyvek
     +    inventorOf: ['coxcomb graph', 'modern nursing']
     };
 
-    // good - git diff with trailing comma
+    // jó - git diff with trailing comma
     const hero = {
          firstName: 'Florence',
          lastName: 'Nightingale',
     +    inventorOf: ['coxcomb chart', 'modern nursing'],
     };
 
-    // bad
+    // rossz
     const hero = {
       firstName: 'Dana',
       lastName: 'Scully'
@@ -1733,7 +1733,7 @@ Más Kézikönyvek
       'Superman'
     ];
 
-    // good
+    // jó
     const hero = {
       firstName: 'Dana',
       lastName: 'Scully',
@@ -1745,7 +1745,7 @@ Más Kézikönyvek
     ];
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Semicolons
@@ -1755,19 +1755,19 @@ Más Kézikönyvek
   eslint rules: [`semi`](http://eslint.org/docs/rules/semi.html).
 
     ```javascript
-    // bad
+    // rossz
     (function () {
       const name = 'Skywalker'
       return name
     })()
 
-    // good
+    // jó
     (() => {
       const name = 'Skywalker';
       return name;
     })();
 
-    // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
+    // jó (guards against the function becoming an argument when two files with IIFEs are concatenated)
     ;(() => {
       const name = 'Skywalker';
       return name;
@@ -1776,7 +1776,7 @@ Más Kézikönyvek
 
     [Read more](http://stackoverflow.com/questions/7365172/semicolon-before-self-invoking-function/7365214%237365214).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Type Casting & Coercion
@@ -1787,10 +1787,10 @@ Más Kézikönyvek
     ```javascript
     //  => this.reviewScore = 9;
 
-    // bad
+    // rossz
     const totalScore = this.reviewScore + '';
 
-    // good
+    // jó
     const totalScore = String(this.reviewScore);
     ```
 
@@ -1799,29 +1799,29 @@ Más Kézikönyvek
     ```javascript
     const inputValue = '4';
 
-    // bad
+    // rossz
     const val = new Number(inputValue);
 
-    // bad
+    // rossz
     const val = +inputValue;
 
-    // bad
+    // rossz
     const val = inputValue >> 0;
 
-    // bad
+    // rossz
     const val = parseInt(inputValue);
 
-    // good
+    // jó
     const val = Number(inputValue);
 
-    // good
+    // jó
     const val = parseInt(inputValue, 10);
     ```
 
   - [21.4](#21.4) <a name='21.4'></a> If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [performance reasons](http://jsperf.com/coercion-vs-casting/3), leave a comment explaining why and what you're doing.
 
     ```javascript
-    // good
+    // jó
     /**
      * parseInt was the reason my code was slow.
      * Bitshifting the String to coerce it to a
@@ -1843,17 +1843,17 @@ Más Kézikönyvek
     ```javascript
     const age = 0;
 
-    // bad
+    // rossz
     const hasAge = new Boolean(age);
 
-    // good
+    // jó
     const hasAge = Boolean(age);
 
-    // good
+    // jó
     const hasAge = !!age;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Naming Conventions
@@ -1861,12 +1861,12 @@ Más Kézikönyvek
   - [22.1](#22.1) <a name='22.1'></a> Avoid single letter names. Be descriptive with your naming.
 
     ```javascript
-    // bad
+    // rossz
     function q() {
       // ...stuff...
     }
 
-    // good
+    // jó
     function query() {
       // ..stuff..
     }
@@ -1877,12 +1877,12 @@ Más Kézikönyvek
   eslint rules: [`camelcase`](http://eslint.org/docs/rules/camelcase.html).
 
     ```javascript
-    // bad
+    // rossz
     const OBJEcttsssss = {};
     const this_is_my_object = {};
     function c() {}
 
-    // good
+    // jó
     const thisIsMyObject = {};
     function thisIsMyFunction() {}
     ```
@@ -1890,7 +1890,7 @@ Más Kézikönyvek
   - [22.3](#22.3) <a name='22.3'></a> Use PascalCase when naming constructors or classes.
 
     ```javascript
-    // bad
+    // rossz
     function user(options) {
       this.name = options.name;
     }
@@ -1899,7 +1899,7 @@ Más Kézikönyvek
       name: 'nope',
     });
 
-    // good
+    // jó
     class User {
       constructor(options) {
         this.name = options.name;
@@ -1916,18 +1916,18 @@ Más Kézikönyvek
   eslint rules: [`no-underscore-dangle`](http://eslint.org/docs/rules/no-underscore-dangle.html).
 
     ```javascript
-    // bad
+    // rossz
     this.__firstName__ = 'Panda';
     this.firstName_ = 'Panda';
 
-    // good
+    // jó
     this._firstName = 'Panda';
     ```
 
   - [22.5](#22.5) <a name='22.5'></a> Don't save references to `this`. Use arrow functions or Function#bind.
 
     ```javascript
-    // bad
+    // rossz
     function foo() {
       const self = this;
       return function () {
@@ -1935,7 +1935,7 @@ Más Kézikönyvek
       };
     }
 
-    // bad
+    // rossz
     function foo() {
       const that = this;
       return function () {
@@ -1943,7 +1943,7 @@ Más Kézikönyvek
       };
     }
 
-    // good
+    // jó
     function foo() {
       return () => {
         console.log(this);
@@ -1960,14 +1960,14 @@ Más Kézikönyvek
     }
     export default CheckBox;
 
-    // in some other file
-    // bad
+    // valamilyen másik fájlban
+    // rossz
     import CheckBox from './checkBox';
 
-    // bad
+    // rossz
     import CheckBox from './check_box';
 
-    // good
+    // jó
     import CheckBox from './CheckBox';
     ```
 
@@ -1992,7 +1992,7 @@ Más Kézikönyvek
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Accessors
@@ -2001,28 +2001,28 @@ Más Kézikönyvek
   - [23.2](#23.2) <a name='23.2'></a> If you do make accessor functions use getVal() and setVal('hello').
 
     ```javascript
-    // bad
+    // rossz
     dragon.age();
 
-    // good
+    // jó
     dragon.getAge();
 
-    // bad
+    // rossz
     dragon.age(25);
 
-    // good
+    // jó
     dragon.setAge(25);
     ```
 
   - [23.3](#23.3) <a name='23.3'></a> If the property is a `boolean`, use `isVal()` or `hasVal()`.
 
     ```javascript
-    // bad
+    // rossz
     if (!dragon.age()) {
       return false;
     }
 
-    // good
+    // jó
     if (!dragon.hasAge()) {
       return false;
     }
@@ -2047,7 +2047,7 @@ Más Kézikönyvek
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Events
@@ -2055,7 +2055,7 @@ Más Kézikönyvek
   - [24.1](#24.1) <a name='24.1'></a> When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
 
     ```javascript
-    // bad
+    // rossz
     $(this).trigger('listingUpdated', listing.id);
 
     ...
@@ -2068,7 +2068,7 @@ Más Kézikönyvek
     prefer:
 
     ```javascript
-    // good
+    // jó
     $(this).trigger('listingUpdated', { listingId: listing.id });
 
     ...
@@ -2078,7 +2078,7 @@ Más Kézikönyvek
     });
     ```
 
-  **[⬆ back to top](#table-of-contents)**
+  **[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## jQuery
@@ -2086,20 +2086,20 @@ Más Kézikönyvek
   - [25.1](#25.1) <a name='25.1'></a> Prefix jQuery object variables with a `$`.
 
     ```javascript
-    // bad
+    // rossz
     const sidebar = $('.sidebar');
 
-    // good
+    // jó
     const $sidebar = $('.sidebar');
 
-    // good
+    // jó
     const $sidebarBtn = $('.sidebar-btn');
     ```
 
   - [25.2](#25.2) <a name='25.2'></a> Cache jQuery lookups.
 
     ```javascript
-    // bad
+    // rossz
     function setSidebar() {
       $('.sidebar').hide();
 
@@ -2110,7 +2110,7 @@ Más Kézikönyvek
       });
     }
 
-    // good
+    // jó
     function setSidebar() {
       const $sidebar = $('.sidebar');
       $sidebar.hide();
@@ -2127,30 +2127,30 @@ Más Kézikönyvek
   - [25.4](#25.4) <a name='25.4'></a> Use `find` with scoped jQuery object queries.
 
     ```javascript
-    // bad
+    // rossz
     $('ul', '.sidebar').hide();
 
-    // bad
+    // rossz
     $('.sidebar').find('ul').hide();
 
-    // good
+    // jó
     $('.sidebar ul').hide();
 
-    // good
+    // jó
     $('.sidebar > ul').hide();
 
-    // good
+    // jó
     $sidebar.find('ul').hide();
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## ECMAScript 5 Compatibility
 
   - [26.1](#26.1) <a name='26.1'></a> Refer to [Kangax](https://twitter.com/kangax/)'s ES5 [compatibility table](http://kangax.github.io/es5-compat-table/).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## ECMAScript 6 Styles
 
@@ -2170,7 +2170,7 @@ Más Kézikönyvek
 1. [Iterators and Generators](#iterators-and-generators)
 1. [Modules](#modules)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Testing
 
@@ -2190,7 +2190,7 @@ Más Kézikönyvek
    - 100% test coverage is a good goal to strive for, even if it's not always practical to reach it.
    - Whenever you fix a bug, _write a regression test_. A bug fixed without a regression test is almost certainly going to break again in the future.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Performance
@@ -2204,7 +2204,7 @@ Más Kézikönyvek
   - [Long String Concatenation](http://jsperf.com/ya-string-concat)
   - Loading...
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 
 ## Resources
@@ -2286,7 +2286,7 @@ Más Kézikönyvek
   - [JavaScript Jabber](https://devchat.tv/js-jabber/)
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## In the Wild
 
@@ -2351,7 +2351,7 @@ Más Kézikönyvek
   - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
   - **ZocDoc**: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Translation
 
@@ -2410,7 +2410,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ vissza a tetejére](#table-of-contents)**
 
 ## Amendments
 
