@@ -89,7 +89,7 @@ Más Kézikönyvek
 
   - [2.1](#2.1) <a name='2.1'></a> Use `const` for all of your references; avoid using `var`.
 
-  > Why? This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.
+  > Miért? This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.
 
   eslint rules: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html).
 
@@ -105,7 +105,7 @@ Más Kézikönyvek
 
   - [2.2](#2.2) <a name='2.2'></a> If you must reassign references, use `let` instead of `var`.
 
-  > Why? `let` is block-scoped rather than function-scoped like `var`.
+  > Miért? `let` is block-scoped rather than function-scoped like `var`.
 
   eslint rules: [`no-var`](http://eslint.org/docs/rules/no-var.html).
 
@@ -189,7 +189,7 @@ Más Kézikönyvek
   <a name="es6-computed-properties"></a>
   - [3.4](#3.4) <a name='3.4'></a> Use computed property names when creating objects with dynamic property names.
 
-  > Why? They allow you to define all the properties of an object in one place.
+  > Miért? They allow you to define all the properties of an object in one place.
 
     ```javascript
 
@@ -240,7 +240,7 @@ Más Kézikönyvek
   <a name="es6-object-concise"></a>
   - [3.6](#3.6) <a name='3.6'></a> Use property value shorthand.
 
-  > Why? It is shorter to write and descriptive.
+  > Miért? It is shorter to write and descriptive.
 
   eslint rules: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html).
 
@@ -260,7 +260,7 @@ Más Kézikönyvek
 
   - [3.7](#3.7) <a name='3.7'></a> Group your shorthand properties at the beginning of your object declaration.
 
-  > Why? It's easier to tell which properties are using the shorthand.
+  > Miért? It's easier to tell which properties are using the shorthand.
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -344,7 +344,7 @@ Más Kézikönyvek
 
   - [5.1](#5.1) <a name='5.1'></a> Use object destructuring when accessing and using multiple properties of an object.
 
-  > Why? Destructuring saves you from creating temporary references for those properties.
+  > Miért? Destructuring saves you from creating temporary references for those properties.
 
     ```javascript
     // rossz
@@ -382,7 +382,7 @@ Más Kézikönyvek
 
   - [5.3](#5.3) <a name='5.3'></a> Use object destructuring for multiple return values, not array destructuring.
 
-  > Why? You can add new properties over time or change the order of things without breaking call sites.
+  > Miért? You can add new properties over time or change the order of things without breaking call sites.
 
     ```javascript
     // rossz
@@ -443,7 +443,7 @@ Más Kézikönyvek
   <a name="es6-template-literals"></a>
   - [6.4](#6.4) <a name='6.4'></a> When programmatically building up strings, use template strings instead of concatenation.
 
-  > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
+  > Miért? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
 
   eslint rules: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html).
 
@@ -472,7 +472,7 @@ Más Kézikönyvek
 
   - [7.1](#7.1) <a name='7.1'></a> Use function declarations instead of function expressions.
 
-  > Why? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
+  > Miért? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
 
     ```javascript
     // rossz
@@ -530,7 +530,7 @@ Más Kézikönyvek
   <a name="es6-rest"></a>
   - [7.6](#7.6) <a name='7.6'></a> Never use `arguments`, opt to use rest syntax `...` instead.
 
-  > Why? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
+  > Miért? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
 
     ```javascript
     // rossz
@@ -574,7 +574,7 @@ Más Kézikönyvek
 
   - [7.8](#7.8) <a name='7.8'></a> Avoid side effects with default parameters.
 
-  > Why? They are confusing to reason about.
+  > Miért? They are confusing to reason about.
 
   ```javascript
   var b = 1;
@@ -604,7 +604,7 @@ Más Kézikönyvek
 
 - [7.10](#7.10) <a name='7.10'></a> Never use the Function constructor to create a new function.
 
-  > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
+  > Miért? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
 
   ```javascript
   // rossz
@@ -616,7 +616,7 @@ Más Kézikönyvek
 
 - [7.11](#7.11) <a name="7.11"></a> Spacing in a function signature.
 
-  > Why? Consistency is good, and you shouldn’t have to add or remove a space when adding or removing a name.
+  > Miért? Consistency is good, and you shouldn’t have to add or remove a space when adding or removing a name.
 
   ```javascript
   // rossz
@@ -635,7 +635,7 @@ Más Kézikönyvek
 
   - [8.1](#8.1) <a name='8.1'></a> When you must use function expressions (as when passing an anonymous function), use arrow function notation.
 
-  > Why? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
+  > Miért? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
 
   > Why not? If you have a fairly complicated function, you might move that logic out into its own function declaration.
 
@@ -657,7 +657,7 @@ Más Kézikönyvek
 
   - [8.2](#8.2) <a name='8.2'></a> If the function body consists of a single expression, feel free to omit the braces and use the implicit return. Otherwise use a `return` statement.
 
-  > Why? Syntactic sugar. It reads well when multiple functions are chained together.
+  > Miért? Syntactic sugar. It reads well when multiple functions are chained together.
 
   > Why not? If you plan on returning an object.
 
@@ -682,7 +682,7 @@ Más Kézikönyvek
 
   - [8.3](#8.3) <a name='8.3'></a> In case the expression spans over multiple lines, wrap it in parentheses for better readability.
 
-  > Why? It shows clearly where the function starts and ends.
+  > Miért? It shows clearly where the function starts and ends.
 
     ```js
     // rossz
@@ -701,7 +701,7 @@ Más Kézikönyvek
 
   - [8.4](#8.4) <a name='8.4'></a> If your function only takes a single argument, feel free to omit the parentheses.
 
-  > Why? Less visual clutter.
+  > Miért? Less visual clutter.
 
   eslint rules: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html).
 
@@ -720,7 +720,7 @@ Más Kézikönyvek
 
   - [9.1](#9.1) <a name='9.1'></a> Always use `class`. Avoid manipulating `prototype` directly.
 
-  > Why? `class` syntax is more concise and easier to reason about.
+  > Miért? `class` syntax is more concise and easier to reason about.
 
     ```javascript
     // rossz
@@ -749,7 +749,7 @@ Más Kézikönyvek
 
   - [9.2](#9.2) <a name='9.2'></a> Use `extends` for inheritance.
 
-  > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
+  > Miért? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
 
     ```javascript
     // rossz
@@ -828,11 +828,11 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Modules
+## Modulok
 
   - [10.1](#10.1) <a name='10.1'></a> Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
 
-  > Why? Modules are the future, let's start using the future now.
+  > Miért? Modules are the future, let's start using the future now.
 
     ```javascript
     // rossz
@@ -850,7 +850,7 @@ Más Kézikönyvek
 
   - [10.2](#10.2) <a name='10.2'></a> Do not use wildcard imports.
 
-  > Why? This makes sure you have a single default export.
+  > Miért? This makes sure you have a single default export.
 
     ```javascript
     // rossz
@@ -862,15 +862,15 @@ Más Kézikönyvek
 
   - [10.3](#10.3) <a name='10.3'></a>And do not export directly from an import.
 
-  > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
+  > Miért? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
 
     ```javascript
     // rossz
-    // filename es6.js
+    // fájlnév es6.js
     export { es6 as default } from './airbnbStyleGuide';
 
     // jó
-    // filename es6.js
+    // fájlnév es6.js
     import { es6 } from './AirbnbStyleGuide';
     export default es6;
     ```
@@ -881,7 +881,7 @@ Más Kézikönyvek
 
   - [11.1](#11.1) <a name='11.1'></a> Don't use iterators. Prefer JavaScript's higher-order functions like `map()` and `reduce()` instead of loops like `for-of`.
 
-  > Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side-effects.
+  > Miért? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side-effects.
 
   eslint rules: [`no-iterator`](http://eslint.org/docs/rules/no-iterator.html).
 
@@ -908,7 +908,7 @@ Más Kézikönyvek
 
   - [11.2](#11.2) <a name='11.2'></a> Don't use generators for now.
 
-  > Why? They don't transpile well to ES5.
+  > Miért? They don't transpile well to ES5.
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
@@ -964,7 +964,7 @@ Más Kézikönyvek
 
   - [13.2](#13.2) <a name='13.2'></a> Use one `const` declaration per variable.
 
-    > Why? It's easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs.
+    > Miért? It's easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs.
 
   eslint rules: [`one-var`](http://eslint.org/docs/rules/one-var.html).
 
@@ -988,7 +988,7 @@ Más Kézikönyvek
 
   - [13.3](#13.3) <a name='13.3'></a> Group all your `const`s and then group all your `let`s.
 
-  > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
+  > Miért? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
     ```javascript
     // rossz
@@ -1013,7 +1013,7 @@ Más Kézikönyvek
 
   - [13.4](#13.4) <a name='13.4'></a> Assign variables where you need them, but place them in a reasonable place.
 
-  > Why? `let` and `const` are block scoped and not function scoped.
+  > Miért? `let` and `const` are block scoped and not function scoped.
 
     ```javascript
     // jó
@@ -1704,7 +1704,7 @@ Más Kézikönyvek
 
   eslint rules: [`no-comma-dangle`](http://eslint.org/docs/rules/no-comma-dangle.html).
 
-  > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
+  > Miért? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
 
     ```javascript
     // rossz - git diff without trailing comma
@@ -1951,7 +1951,7 @@ Más Kézikönyvek
     }
     ```
 
-  - [22.6](#22.6) <a name='22.6'></a> If your file exports a single class, your filename should be exactly the name of the class.
+  - [22.6](#22.6) <a name='22.6'></a> If your file exports a single class, your fájlnév should be exactly the name of the class.
 
     ```javascript
     // file contents
@@ -1971,7 +1971,7 @@ Más Kézikönyvek
     import CheckBox from './CheckBox';
     ```
 
-  - [22.7](#22.7) <a name='22.7'></a> Use camelCase when you export-default a function. Your filename should be identical to your function's name.
+  - [22.7](#22.7) <a name='22.7'></a> Use camelCase when you export-default a function. Your fájlnév should be identical to your function's name.
 
     ```javascript
     function makeStyleGuide() {
@@ -2050,7 +2050,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Events
+## Események
 
   - [24.1](#24.1) <a name='24.1'></a> When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
 
@@ -2083,7 +2083,7 @@ Más Kézikönyvek
 
 ## jQuery
 
-  - [25.1](#25.1) <a name='25.1'></a> Prefix jQuery object variables with a `$`.
+  - [25.1](#25.1) <a name='25.1'></a> A jQuery objektum változókhoz használj `$` prefixet.
 
     ```javascript
     // rossz
@@ -2172,9 +2172,9 @@ Más Kézikönyvek
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## Testing
+## Tesztelés
 
-  - [28.1](#28.1) <a name="28.1"></a> **Yup.**
+  - [28.1](#28.1) <a name="28.1"></a> **Igen.**
 
     ```javascript
     function () {
@@ -2182,7 +2182,7 @@ Más Kézikönyvek
     }
     ```
 
-  - [28.2](#28.2) <a name="28.2"></a> **No, but seriously**:
+  - [28.2](#28.2) <a name="28.2"></a> **Nem, de most komolyan**:
    - Whichever testing framework you use, you should be writing tests!
    - Strive to write many small pure functions, and minimize where mutations occur.
    - Be cautious about stubs and mocks - they can make your tests more brittle.
@@ -2193,7 +2193,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Performance
+## Teljesítmény
 
   - [On Layout & Web Performance](http://www.kellegous.com/j/2013/01/26/layout-performance/)
   - [String vs Array Concat](http://jsperf.com/string-vs-array-concat/2)
@@ -2220,7 +2220,7 @@ Más Kézikönyvek
 
   - [Standard ECMA-262](http://www.ecma-international.org/ecma-262/6.0/index.html)
 
-**Tools**
+**Eszközök**
 
   - Code Style Linters
     + [ESlint](http://eslint.org/) - [Airbnb Style .eslintrc](https://github.com/airbnb/javascript/blob/master/linters/.eslintrc)
