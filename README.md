@@ -20,7 +20,7 @@ Más Kézikönyvek
   1. [Destructuring](#destructuring)
   1. [Szöveges típusok (Strings)](#strings)
   1. [Függvények (Functions)](#functions)
-  1. [Arrow Functions](#arrow-functions)
+  1. [Nyíl függvények](#arrow-functions)
   1. [Konstruktorok (Constructors)](#constructors)
   1. [Modulok (Modules)](#modules)
   1. [Iterátorok és Generátorok (Iterators and Generators)](#iterators-and-generators)
@@ -2216,7 +2216,7 @@ Más Kézikönyvek
   - [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/)
   - [Comprehensive Overview of ES6 Features](http://es6-features.org/)
 
-**Read This**
+**Olvasd el**
 
   - [Standard ECMA-262](http://www.ecma-international.org/ecma-262/6.0/index.html)
 
@@ -2240,7 +2240,7 @@ Más Kézikönyvek
   - [Popular JavaScript Coding Conventions on Github](http://sideeffect.kr/popularconvention/#javascript) - JeongHoon Byun
   - [Multiple var statements in JavaScript, not superfluous](http://benalman.com/news/2012/05/multiple-var-statements-javascript/) - Ben Alman
 
-**Further Reading**
+**További olvasnivaló**
 
   - [Understanding JavaScript Closures](http://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
   - [Basic JavaScript for the impatient programmer](http://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
@@ -2248,7 +2248,7 @@ Más Kézikönyvek
   - [ES6 Features](https://github.com/lukehoban/es6features) - Luke Hoban
   - [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
 
-**Books**
+**Könyvek**
 
   - [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
   - [JavaScript Patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
@@ -2267,7 +2267,7 @@ Más Kézikönyvek
   - [Eloquent JavaScript](http://eloquentjavascript.net/) - Marijn Haverbeke
   - [You Don't Know JS: ES6 & Beyond](http://shop.oreilly.com/product/0636920033769.do) - Kyle Simpson
 
-**Blogs**
+**Blogok**
 
   - [DailyJS](http://dailyjs.com/)
   - [JavaScript Weekly](http://javascriptweekly.com/)
