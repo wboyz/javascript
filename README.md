@@ -52,7 +52,7 @@ Más Kézikönyvek
 
 ## Típusok
 
-  - [1.1](#1.1) <a name='1.1'></a> **Primitives**: When you access a primitive type you work directly on its value.
+  - [1.1](#1.1) <a name='1.1'></a> **Primitív típusok**: When you access a primitive type you work directly on its value.
 
     + `string`
     + `number`
@@ -68,7 +68,7 @@ Más Kézikönyvek
 
     console.log(foo, bar); // => 1, 9
     ```
-  - [1.2](#1.2) <a name='1.2'></a> **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#1.2) <a name='1.2'></a> **Komplex típusok**: When you access a complex type you work on a reference to its value.
 
     + `object`
     + `array`
@@ -139,7 +139,7 @@ Más Kézikönyvek
 
 ## Objektumok
 
-  - [3.1](#3.1) <a name='3.1'></a> Use the literal syntax for object creation.
+  - [3.1](#3.1) <a name='3.1'></a> Objektum létrehozására használj literál szintaxist.
 
   eslint rules: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html).
 
@@ -289,7 +289,7 @@ Más Kézikönyvek
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## Arrays
+## Tömbök
 
   - [4.1](#4.1) <a name='4.1'></a> Use the literal syntax for array creation.
 
@@ -468,7 +468,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Functions
+## Függvények
 
   - [7.1](#7.1) <a name='7.1'></a> Use function declarations instead of function expressions.
 
@@ -631,7 +631,7 @@ Más Kézikönyvek
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## Arrow Functions
+## Nyíl függvények
 
   - [8.1](#8.1) <a name='8.1'></a> When you must use function expressions (as when passing an anonymous function), use arrow function notation.
 
@@ -716,7 +716,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Constructors
+## Konsturktorok
 
   - [9.1](#9.1) <a name='9.1'></a> Always use `class`. Avoid manipulating `prototype` directly.
 
@@ -913,7 +913,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Properties
+## Tulajdonságok
 
   - [12.1](#12.1) <a name='12.1'></a> Use dot notation when accessing properties.
 
@@ -950,7 +950,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Variables
+## Változók
 
   - [13.1](#13.1) <a name='13.1'></a> Always use `const` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
 
@@ -1157,7 +1157,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Comparison Operators & Equality
+## Összehasonlító Operátorok és Egyenlőség
 
   - [15.1](#15.1) <a name='15.1'></a> Use `===` and `!==` over `==` and `!=`.
   - [15.2](#15.2) <a name='15.2'></a> Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
@@ -1207,7 +1207,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Blocks
+## Blokkok
 
   - [16.1](#16.1) <a name='16.1'></a> Use braces with all multi-line blocks.
 
@@ -1261,7 +1261,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Comments
+## Kommentek
 
   - [17.1](#17.1) <a name='17.1'></a> Use `/** ... */` for multi-line comments. Include a description, specify types and values for all parameters and return values.
 
@@ -1364,7 +1364,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Whitespace
+## Szóközök és Tabulátorok
 
   - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 2 spaces.
 
@@ -1662,9 +1662,9 @@ Más Kézikönyvek
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## Commas
+## Vesszők
 
-  - [19.1](#19.1) <a name='19.1'></a> Leading commas: **Nope.**
+  - [19.1](#19.1) <a name='19.1'></a> Vesszők a sor elején: **Ne.**
 
   eslint rules: [`comma-style`](http://eslint.org/docs/rules/comma-style.html).
 
@@ -1748,7 +1748,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Semicolons
+## Pontosvesszők
 
   - [20.1](#20.1) <a name='20.1'></a> **Yup.**
 
@@ -1856,7 +1856,7 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## Naming Conventions
+## Elnevezési Konvenciók
 
   - [22.1](#22.1) <a name='22.1'></a> Avoid single letter names. Be descriptive with your naming.
 
