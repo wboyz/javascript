@@ -1,11 +1,11 @@
-# Airbnb JavaScript Kézikönyv() {
+# Airbnb JavaScript Stíluskalauz() {
 
 *A JavaScript egyik legésszerűbb megközelítése*
 
 [![Letöltés](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Más Kézikönyvek
+Más Stíluskalauzok
  - [ES5](es5/)
  - [React](react/)
  - [CSS & Sass](https://github.com/airbnb/css)
@@ -38,17 +38,17 @@ Más Kézikönyvek
   1. [Accessors](#accessors)
   1. [Események (Events)](#events)
   1. [jQuery](#jquery)
-  1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
-  1. [ECMAScript 6 Styles](#ecmascript-6-styles)
+  1. [ECMAScript 5 Kompatibilitás (ECMAScript 5 Compatibility)](#ecmascript-5-compatibility)
+  1. [ECMAScript 6 Stílusok (ECMAScript 6 Styles)](#ecmascript-6-styles)
   1. [Tesztelés (Testing)](#testing)
   1. [Teljesítmény (Performance)](#performance)
   1. [Erőforrások (Resources)](#resources)
-  1. [In the Wild](#in-the-wild)
-  1. [Forítások (Translation)](#translation)
-  1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
+  1. [A Vadonban (In The Wild)](#in-the-wild)
+  1. [Fordítások (Translations)](#translation)
+  1. [A JavaScript Stíluskalauz (The JavaScript Style Guide Guide)](#the-javascript-style-guide-guide)
   1. [Chat With Us About JavaScript](#chat-with-us-about-javascript)
-  1. [Contributors](#contributors)
-  1. [License](#license)
+  1. [Közreműködők (Contributors)](#contributors)
+  1. [Licenc (License)](#license)
 
 ## Típusok
 
@@ -2146,13 +2146,13 @@ Más Kézikönyvek
 **[⬆ vissza a tetejére](#table-of-contents)**
 
 
-## ECMAScript 5 Compatibility
+## ECMAScript 5 Kompatibilitás
 
   - [26.1](#26.1) <a name='26.1'></a> Refer to [Kangax](https://twitter.com/kangax/)'s ES5 [compatibility table](http://kangax.github.io/es5-compat-table/).
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## ECMAScript 6 Styles
+## ECMAScript 6 Stílusok
 
   - [27.1](#27.1) <a name='27.1'></a> This is a collection of links to the various es6 features.
 
@@ -2227,7 +2227,7 @@ Más Kézikönyvek
     + [JSHint](http://jshint.com/) - [Airbnb Style .jshintrc](https://github.com/airbnb/javascript/blob/master/linters/jshintrc)
     + [JSCS](https://github.com/jscs-dev/node-jscs) - [Airbnb Style Preset](https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json)
 
-**Other Style Guides**
+**Más Stíluskalauzok**
 
   - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
   - [jQuery Core Style Guidelines](http://contribute.jquery.org/style-guide/js/)
@@ -2281,14 +2281,14 @@ Más Kézikönyvek
   - [Dustin Diaz](http://dustindiaz.com/)
   - [nettuts](http://code.tutsplus.com/?s=javascript)
 
-**Podcasts**
+**Podkasztok**
 
   - [JavaScript Jabber](https://devchat.tv/js-jabber/)
 
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## In the Wild
+## A Vadonban
 
   This is a list of organizations that are using this style guide. Send us a pull request and we'll add you to the list.
 
@@ -2353,9 +2353,9 @@ Más Kézikönyvek
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## Translation
+## Fordítások
 
-  This style guide is also available in other languages:
+  Ez a stíluskalauz a következő nyelveken is elérhető:
 
   - ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Brazilian Portuguese**: [armoucar/javascript-style-guide](https://github.com/armoucar/javascript-style-guide)
   - ![bg](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Bulgaria.png) **Bulgarian**: [borislavvv/javascript](https://github.com/borislavvv/javascript)
@@ -2380,12 +2380,12 @@ Más Kézikönyvek
 
   - Find us on [gitter](https://gitter.im/airbnb/javascript).
 
-## Contributors
+## Közreműködők
 
-  - [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
+  - [Közreműködők megtekintése](https://github.com/airbnb/javascript/graphs/contributors)
 
 
-## License
+## Licenc
 
 (The MIT License)
 
@@ -2412,7 +2412,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 **[⬆ vissza a tetejére](#table-of-contents)**
 
-## Amendments
+## Módosítások
 
 We encourage you to fork this guide and change the rules to fit your team's style guide. Below, you may list some amendments to the style guide. This allows you to periodically update your style guide without having to deal with merge conflicts.
 
